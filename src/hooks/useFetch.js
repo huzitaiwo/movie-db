@@ -16,10 +16,11 @@ export const useFetch = url => {
         if(!res.ok) {
           throw new Error(res.statusText)
         }
-        const json = await res.json()
+        const movies = await res.json()
 
         setIsPending(false)
-        setData(json)
+        setData(movies.results)
+        console.Consolelog(movies)
         setError(null)
         
       } catch(err) {
