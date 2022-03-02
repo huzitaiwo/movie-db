@@ -27,7 +27,7 @@ export const useFetch = url => {
           console.log("the fetch was aborted")
         } else {
           setIsPending(false)
-          setError('Could not fetch user profiles')
+          setError('Could not load movies')
           console.log(err.message)
         }
         
