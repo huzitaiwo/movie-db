@@ -2,6 +2,8 @@ import { useEffect, useState} from 'react'
 
 export const useFetch = url => {
   const [data, setData] = useState([])
+  const [filtered, setFiltered] = useState([])
+  const [genre, setGenre] = useState(0)
   const [isPending, setIsPending] = useState(false)
   const [error, setError] = useState(null)
 
@@ -20,6 +22,7 @@ export const useFetch = url => {
 
         setIsPending(false)
         setData(movies.results)
+        setFiltered(movies.results)
         console.log(movies.results)
         setError(null)
         

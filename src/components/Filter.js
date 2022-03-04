@@ -7,6 +7,7 @@ export default function Filter() {
       <button>All</button>
       <button>Comedy</button>
       <button>Action</button>
+      <button>Animation</button>
     </div>
   )
 }
