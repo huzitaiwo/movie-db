@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <div className="popular-movies">
         {movies && movies.map(movie => (
-          <Movie />
+          <Movie key={movie.id} movie={movie} />
         ))}
       </div>
     </div>
