@@ -1,3 +1,6 @@
+.filter {
+  margin-bottom: 2rem;
+}
 .filter button {
   margin-right: 2rem;
   min-width: 5rem;
