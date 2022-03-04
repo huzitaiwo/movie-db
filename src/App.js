@@ -3,6 +3,7 @@ import { useFetch } from "./hooks/useFetch"
 // styles
 import "./App.css"
 import Movie from "./components/Movie";
+import Filter from "./components/Filter";
 
 function App() {
   // https://api.themoviedb.org/3/movie/550?api_key=821df521d9494e5d28d041685eeaee64
@@ -12,9 +13,9 @@ function App() {
   const url = 'https://api.themoviedb.org/3/movie/popular?api_key=821df521d9494e5d28d041685eeaee64';
   const { data: movies, isPending, error } = useFetch(url)
 
-
   return (
     <div className="App">
+      <Filter />
       <div className="popular-movies">
         {movies && movies.map(movie => (
           <Movie key={movie.id} movie={movie} />
