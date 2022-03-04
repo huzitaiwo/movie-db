@@ -20,7 +20,7 @@ export const useFetch = url => {
 
         setIsPending(false)
         setData(movies.results)
-        console.Consolelog(movies)
+        console.log(movies.results)
         setError(null)
         
       } catch(err) {
